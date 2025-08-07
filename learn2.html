@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single course</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'raleway': ['Raleway', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'mochiy': ['Mochiy Pop One', 'sans-serif'],
+      },
+      fontWeight: {
+        'poppins-100': 100,
+        'poppins-200': 200,
+        'poppins-300': 300,
+        'poppins-400': 400,
+        'poppins-500': 500,
+        'poppins-600': 600,
+        'poppins-700': 700,
+        'poppins-800': 800,
+        'poppins-900': 900,
+
+        'raleway-100':100,
+        'raleway-200':200,
+        'raleway-300':300,
+        'raleway-400':400,
+        'raleway-500':500,
+        'raleway-600':600,
+        'raleway-700':700,
+        'raleway-800':800,
+        'raleway-900':900,
+
+
+        'roboto-100': 100,
+        'roboto-300': 300,
+        'roboto-400': 400,
+        'roboto-500': 500,
+        'roboto-700': 700,
+        'roboto-900': 900,
+      },
+      colors: {
+        primary: '#9f6496',
+        secondary:'#6265ab',
+        terirory:'#e6e4e4'
+      }
+    }
+  }
+}
+</script>
+<style>
+
+    </style>
+    <script>
+      
+        
+    
+      function popup(){
+  const popup = document.getElementById('popup');
+  popup.classList.remove('hidden');
+}
+    </script>
+    <!-- <link rel="stylesheet" href="input.css"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            overflow-x: hidden;
+        }
+        .nav-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-menu.active {
+            transform: translateX(0);
+        }
+        .dot, .dot-expert, .dot-testimonial {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      border: 1px solid rgb(66, 66, 66);
+      background-color: white; /* Gray-300 */
+      display: inline-block;
+      margin: 0 4px;
+      cursor: pointer;
+      transition: width 0.3s ease; /* Add transition for smooth effect */
+    }
+
+    .dot-testimonial{
+      border: 0.5px solid #9f6496;
+      background-color: #9f6496;
+    }
+
+    .dot.active, .dot-expert.active{
+      width: 80px; /* Make the active dot wider */
+      background-color: #000000;
+      border-radius: 20px; /* Darker color for active dot */
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+
+    </style>
+</head>
+
+<body>
+
+ 
+ 
+
+      <!-- Overview Section -->
+      <section id="Overview" class="py-12 bg-white">
+          <div class="container max-w-[900px] mx-auto px-4">
+              <h2 class="text-2xl font-bold text-gray-800 mb-2">Overview Of Certificate Course In Advanced Cybercrime Investigation</h2>
+              <p class="text-gray-700 mb-8">This advanced course delves into the complex world of modern cybercrime, providing a comprehensive overview of investigation techniques, global threats, and the role of emerging technologies like AI. You'll explore evidence handling, blockchain forensics, and defensive strategies, preparing you for a career in cybercrime investigation.</p>
+
+              <div class="space-y-2">
+                <!-- Module 1 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 1: Understanding the Landscape of Cybercrime</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Digital Responsibility and Privacy</li>
+                      <li>Reporting Cybercrime in India</li>
+                      <li>Case Studies on Corporate Espionage</li>
+                      <li>Insider Threats and Data Vulnerabilities</li>
+                      <li>AI, Deepfakes, and Emerging Threats</li>
+                      <li>Cybercrime and National Security</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 2: Origin and Evolution of Cybercrime</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Understanding Cybercrime</li>
+                      <li>Early Days of Cybercrime</li>
+                      <li>Categories of Cybercrime</li>
+                      <li>Today’s Threat Landscape</li>
+                      <li>Why History Matters for Investigators</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 3: Evidence Handling – Chain of Custody and Reporting</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Understanding Chain of Custody</li>
+                      <li>Handling Physical Evidence</li>
+                      <li>Handling Digital Evidence</li>
+                      <li>Common Challenges and Mitigation</li>
+                      <li>Documentation and Reporting Standards</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 4: Challenges in Cybercrime Investigation</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Technical Challenges in Cybercrime Investigations</li>
+                      <li>Legal and Jurisdictional Barriers</li>
+                      <li>Resource Constraints and Operational Issues</li>
+                      <li>Wider Investigative Challenges</li>
+                      <li>Real-Life Indian Case Studies</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 5: Global Cyber Threats</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc list-inside space-y-1">
+                      <li>Introduction to the Global Cyber Threat Landscape</li>
+                      <li>Ransomware Attacks</li>
+                      <li>Supply Chain Attacks</li>
+                      <li>Nation-State Threats</li>
+                      <li>Social Engineering and Human Exploitation</li>
+                      <li>Advanced Persistent Threats (APTs)</li>
+                      <li>AI-Driven Attacks and Deepfakes</li>
+                      <li>IoT Exploits</li>
+                      <li>Cybercrime-as-a-Service</li>
+                      <li>Critical Infrastructure Attacks</li>
+                      <li>Disinformation and Influence Campaigns</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Module 6 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 6: Impact of Cyber Threats on Nations</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>Cyber Threats to National Security</li>
+                      <li>Economic Impact of Cybercrime</li>
+                      <li>Critical Infrastructure Under Attack</li>
+                      <li>Threats to Democracy and Public Trust</li>
+                      <li>Cyber Espionage and Intellectual Property Theft</li>
+                      <li>Attribution and Diplomatic Fallout</li>
+                      <li>AI-Powered Cyber Attacks</li>
+                      <li>Quantum Computing Risks</li>
+                      <li>Introduction to Post-Quantum Cryptography (PQC)</li>
+                      <li>Preparing for the Quantum Threat</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 7 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 7: Impact of Cyber Threats on the Private Sector</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>Why the Private Sector is Targeted</li>
+                      <li>Common Cyber Threats to Companies</li>
+                      <li>Impact of Attacks</li>
+                      <li>Real-World Case Study: BigBasket Breach</li>
+                      <li>Prevention Tactics and Best Practices</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 8 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 8: Advanced Cybercrime Investigation Techniques: Blockchain, Cloud, IoT & Human Behavior</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>Blockchain Forensics</li>
+                      <li>Cloud Forensics</li>
+                      <li>IoT Investigations</li>
+                      <li>Privacy & Policy Ethics</li>
+                      <li>Behavioral Profiling & Human-Centric Investigations</li>
+                      <li>Continuous Learning & Skill Evolution</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 9 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 9: AI-Powered Cybercrime Case Studies</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Deepfake Voice Scams</li>
+                        <li>Polymorphic Malware</li>
+                        <li>AI-Crafted Phishing</li>
+                        <li>AI-Enhanced Credential Stuffing</li>
+                        <li>Lessons & Integrated MCQs</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 10 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 10: Deep Learning in Social Engineering Attacks</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                        <li>Automated Phishing Campaigns</li>
+                        <li>AI-Generated Voice and Video (Deepfakes)</li>
+                        <li>AI-Powered Chatbots for Scams</li>
+                        <li>Social Media Manipulation and Fake Profiles</li>
+                        <li>Behavioral Profiling and Target Selection</li>
+                        <li>Defensive Strategies and Case-Based MCQs</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Module 11 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 11: How Defenders Use AI in Cybersecurity</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>AI for Threat Detection</li>
+                      <li>AI in Incident Response and Automation</li>
+                      <li>AI for Threat Hunting</li>
+                      <li>AI for Risk Assessment and Asset Prioritization</li>
+                      <li>AI for Global Threat Intelligence</li>
+                      <li>AI in Endpoint and Email Security</li>
+                      <li>Challenges of Using AI in Defense</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 12 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 12: AI in Threat Hunting</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>Introduction to Threat Hunting</li>
+                      <li>Behavioral Baselines & Anomaly Detection</li>
+                      <li>Predictive Analytics in Threat Anticipation</li>
+                      <li>AI-based Event Correlation</li>
+                      <li>NLP for Intelligence Gathering</li>
+                      <li>Tools and Platforms in the Field</li>
+                      <li>Human-AI Collaboration in Hunting</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 13 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 13: Limitations of AI in Cybersecurity</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>Introduction – AI is Not Magic</li>
+                      <li>Adversarial Attacks</li>
+                      <li>Lack of Contextual Awareness</li>
+                      <li>Alert Fatigue and False Positives</li>
+                      <li>Data Dependency and Bias</li>
+                      <li>Cost, Complexity, and Expertise Requirements</li>
+                      <li>Need for Supervision and Continuous Updates</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 14 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 14: Best Practices to Prevent AI-Powered Threats</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>Staying Informed and Training Continuously</li>
+                      <li>Zero Trust Architecture</li>
+                      <li>Using AI for Defense</li>
+                      <li>Social Engineering Defense</li>
+                      <li>System Hardening Techniques</li>
+                      <li>Red Teaming and Simulation</li>
+                      <li>Auditing AI Tools</li>
+                      <li>Collaboration and Sharing</li>
+                      <li>AI-Specific Incident Response</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Module 15 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 15: Evasion Techniques Used by Attackers</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>Introduction to Evasion Techniques</li>
+                      <li>Encryption, Obfuscation, and Fragmentation</li>
+                      <li>Polymorphic and Metamorphic Malware</li>
+                      <li>Living off the Land (LotL)</li>
+                      <li>Timing-Based and Stealthy Attacks</li>
+                      <li>Protocol Tunneling and Abuse</li>
+                      <li>Spoofing and Masquerading</li>
+                      <li>Fileless Malware</li>
+                      <li>Sandbox and C2 Evasion</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 16 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 16: Emerging Investigator Toolkit</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>AI & Machine Learning – The Always-On Analyst</li>
+                      <li>Cloud Forensics – Investigating the Invisible</li>
+                      <li>OSINT – Intelligence from Open Sources</li>
+                      <li>Blockchain & Cryptocurrency Forensics</li>
+                      <li>Media Forensics</li>
+                      <li>Global Collaboration & Evidence Sharing</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Module 17 -->
+                <div class="py-4 faq-item">
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-black">Module 17: Career Pathway</h3>
+                    <button class="text-black focus:outline-none toggle-button">
+                      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr class="border-blue-500 mt-2">
+                  <div class="hidden mt-4 text-black faq-answer">
+                    <ul class="list-disc pl-5">
+                      <li>Future of Cybercrime Investigation</li>
+                      <li>Career Roles and Responsibilities</li>
+                      <li>Certifications and Skillsets</li>
+                      <li>Professional Development Resources</li>
+                      <li>Career Mapping Workshop</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+      </section>
+    <script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const button = item.querySelector('.toggle-button');
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.toggle-icon');
+
+    button.addEventListener('click', () => {
+      answer.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    });
+  });
+</script>
+
+
+</body>
+</html>

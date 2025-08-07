@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif'],
+          raleway: ['Raleway', 'sans-serif'],
+          roboto: ['Roboto', 'sans-serif'],
+          mochiy: ['Mochiy Pop One', 'sans-serif'],
+        },
+        colors: {
+          primary: '#9f6496',
+          secondary: '#6265ab',
+          tertiary: '#e6e4e4', /* Corrected 'terirory' */
+        },
+      },
+    },
+  };
+</script>
+  
+
+    <!-- <link rel="stylesheet" href="input.css"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            overflow-x: hidden;
+        }
+        .nav-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-menu.active {
+            transform: translateX(0);
+        }
+        .dot, .dot-expert, .dot-testimonial {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      border: 1px solid rgb(66, 66, 66);
+      background-color: white; /* Gray-300 */
+      display: inline-block;
+      margin: 0 4px;
+      cursor: pointer;
+      transition: width 0.3s ease; /* Add transition for smooth effect */
+    }
+
+    .dot-testimonial{
+      border: 0.5px solid #9f6496;
+      background-color: #9f6496;
+    }
+
+    .dot.active, .dot-expert.active{
+      width: 80px; /* Make the active dot wider */
+      background-color: #000000;
+      border-radius: 20px; /* Darker color for active dot */
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    </style>
+</head>
+
+   
+    <!-- Header Section -->
+   
+ <!-- Header Section -->
+   
+<header class="fixed top-0 w-full   bg-white z-50 px-4 sm:px-6 font-[Poppins]">
+  <div class="container mx-auto w-full  flex justify-between items-center py-2">
+    
+    <!-- Left Section: Logo + Programs -->
+    <div class="flex  items-center gap-4 flex-shrink-0">
+      <img src="assets - Copy/newlogo-removebg-preview.png" alt="Avanzo Academy Logo" class="w-24 sm:w-24 md:w-28 lg:w-36">
+      <!-- Programs Button (Visible md and up) -->
+     
+    </div>
+
+    <!-- Center & Right Section: Nav Links & CTA -->
+      <nav class="hidden lg:flex items-center justify-between text-base font-[Poppins] w-full max-w-[75%] gap-x-5">
+      <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
+      <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
+      <a href="Announcement.html" class="text-gray-800 hover:text-[#9f6496]">Announcement</a>
+      <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
+      <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
+      <button onclick="scrolltocontact()" class="text-gray-800 hover:text-[#9f6496] cursor-pointer">Contact</button>
+      <button class="bg-[#d191af] hover:bg-pink-300 text-sm px-2 md:py-1 w-fit rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap"
+                 onclick="window.location.href='https://lms.avanzoacademy.in/#/studentregister_add';">
+ Get Free Demo
+      </button>
+      
+    </nav>
+  
+    <style>
+      .poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+    </style>
+
+    <!-- Hamburger Icon for Mobile -->
+    <button id="menuToggle" class=" lg:hidden scale-125 cursor-pointer text-gray-800 focus:outline-none px-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+   <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-64 max-w-full  sm:w-72 h-full bg-white text-black transform -translate-x-full transition-transform duration-300 z-50">
+    <div class="relative p-6 flex flex-col gap-6">
+      <!-- Close Button -->
+      <button id="closeBtn" class="absolute top-4 right-4 scale-110">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <script>
+        function scrolltocontact(){
+  const contactsection = document.getElementById('contactoptions');
+  contactsection.scrollIntoView({behaviour:'smooth'});
+
+    mobileMenu.classList.add('-translate-x-full');
+}
+        </script>
+      <!-- Mobile Nav Links -->
+      <a href="index.html" class="hover:text-[#9f6496]">Home</a>
+      <a href="courses.html" class="hover:text-[#9f6496]">Courses</a>
+      <a href="Announcement.html" class="hover:text-[#9f6496]">Announcement</a>
+      <a href="https://lms.avanzoacademy.in" class="hover:text-[#9f6496]">Virtual Center</a>
+      <a href="industry.html" class="hover:text-[#9f6496]">Industry</a>
+      <a ><button onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact</button></a>
+      <button class="z-20 bg-[#d191af] px-6 py-2 text-white rounded-full opacity-70 cursor-pointer hover:bg-[#d191af] hover:opacity-100 transition focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"
+        onclick="window.location.href='https://lms.avanzoacademy.in';">
+        Sign in
+      </button>
+    </div>
+  </div>
+</header><br><br>
+
+    <!-- Main Content Area -->
+    <main class="py-16 lg:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Heading -->
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-8 md:mb-12">
+                About Us
+            </h1>
+
+            <!-- Text Content -->
+            <div class="max-w-3xl mx-auto space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
+                <p>
+At Avanzo Cyber Institute, we make cybersecurity education accessible and impactful. Our online academy offers self-paced courses and live training sessions, allowing you to learn on your terms. Whether you're starting out or sharpening your skills, our certifications are designed to equip you with real-world knowledge for today’s cyber challenges. Learn, grow, and get certified with Avanzo                </p>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet. Ea temporibus placeat ab officiis dolorem ut libero consequuntur sed fuga error aut velit nulla et amet laudantium est quis saepe. Et nihil voluptates ut libero iure id tenetur galisum sit fuga culpa qui reprehenderit voluptatum vel internos obcaecati.
+                </p> -->
+                <!-- <p>
+                    Lorem ipsum dolor sit amet. Ea temporibus placeat ab officiis dolorem ut libero consequuntur sed fuga error aut velit nulla et amet laudantium est quis saepe. Et nihil voluptates ut libero iure id tenetur galisum sit fuga culpa qui reprehenderit voluptatum vel internos obcaecati.
+                </p> -->
+            </div>
+
+            <!-- View Courses Button -->
+            <div class="mt-12 md:mt-16">
+                <a href="courses.html" class="inline-block bg-[#833d91] hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-full transition duration-150 ease-in-out text-base">
+                    View Courses
+                </a>
+            </div>
+        </div>
+    </main>
+
+   <!-- Our Mission Section -->
+   <section class="bg-[#9f6496] py-16 lg:py-20"> 
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12 lg:mb-16">
+            Our Mission
+        </h2>
+
+        <!-- Grid Container for Text and Image -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
+
+            <!-- Left Column: Text Content -->
+            <div class="text-white text-base md:text-lg leading-relaxed space-y-6">
+                <p>
+Our mission is to empower individuals and businesses to secure their digital future with cutting-edge training and hands-on expertise, staying ahead of evolving cyber threats.                </p>
+                <p>
+Foster a Culture of Excellence: Cultivate the next generation of cybersecurity professionals who will lead and protect in an increasingly complex digital world.
+Thought leadership: Bring together distinguished faculty to deliver world-class courses, providing students with a global perspective and cutting-edge insights in cybersecurity.
+Cutting-Edge Education: Provide up-to-date training that adapts to the constantly evolving landscape of cyber threats.
+                </p>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div>
+
+                <!-- <img src="assets/what-are-online-classes-vs-traditional-classes.jpg"  alt="Laptop showing a team video conference call" -->
+                 <img src="assets - Copy/what-are-online-classes-vs-traditional-classes.jpg"  alt="Laptop showing a team video conference call"
+                    class="w-full h-auto rounded-lg shadow-lg object-cover"
+                >
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Our Vision Section -->
+<section class="py-16 lg:py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12 lg:mb-16">
+            Our Vision
+        </h2>
+
+        <!-- Grid Container for Image and Text -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
+
+            <!-- Left Column: Image -->
+            <div>
+                <img
+                    src="assets - Copy/Online-Career.jpg" 
+                    alt="Person using a laptop displaying an online course website"
+                    class="w-full h-auto rounded-lg shadow-md object-cover" 
+                >
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div class="text-gray-700 text-base md:text-lg leading-relaxed space-y-6">
+                <p>
+Dear Future Cybersecurity Innovators,
+We’re excited to have you embark on your journey to becoming a cybersecurity professional. In today’s rapidly evolving digital landscape, the demand for skilled cybersecurity experts is at an all-time high. At Avanzo, we believe that you have the potential to make a powerful impact—protecting systems, safeguarding data, and shaping the future of digital security.
+At Avanzo Cybersecurity Institute, we are committed to providing you with more than just theoretical knowledge—we focus on practical, real-world skills that will prepare you for the challenges of cybersecurity. Our expert-led courses, hands-on training, and personalized career guidance are designed to give you a competitive edge in the job market.
+This is your opportunity to not only secure a rewarding career but to also become part of a mission to protect the digital world. Cybersecurity is at the heart of every organization, and by choosing this path, you’re taking a step toward becoming a trusted professional who will shape the future of digital security.
+We invite you to join us, learn from the best, and take the first step towards a successful career in one of the most dynamic industries today. Together, we can build a safer and more secure digital world.
+                </p>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet. Ea temporibus placeat ab officiis dolorem ut libero consequuntur sed fuga error aut velit nulla et amet laudantium est quis saepe. Et nihil voluptates ut libero iure id tenetur galisum sit fuga culpa qui reprehenderit voluptatum vel internos obcaecati.
+                </p> -->
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+      
+                  <footer class="bg-[#9f6496] text-white py-8 z-19">
+                    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 px-4">
+                      <!-- Quick Links -->
+                      <div>
+                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                          <li><a href="#" class="hover:underline">Home</a></li>
+                          <li><a href="#" class="hover:underline">Courses</a></li>
+                          <li><a href="#" class="hover:underline">Announcement</a></li>
+                          <li><a href="#" class="hover:underline">virtual centre</a></li>
+                          <li><a href="#" class="hover:underline">Industry</a></li>
+                          <li><a href="#" class="hover:underline">Contact</a></li>
+                        </ul>
+                        <div class="flex items-center gap-4 mt-4">
+                          <!-- Social Media Icons -->
+                          <a href="https://facebook.com" target="_blank" class="text-white hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 5.1 3.84 9.3 8.77 9.95v-7.03H8.69v-2.92h2.08V9.6c0-2.07 1.23-3.22 3.11-3.22.9 0 1.85.16 1.85.16v2.04h-1.04c-1.03 0-1.34.64-1.34 1.29v1.54h2.28l-.36 2.92h-1.92v7.03C18.16 21.3 22 17.1 22 12z" />
+                            </svg>
+                          </a>
+                          <a href="https://twitter.com" target="_blank" class="text-white hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.18 4.18 0 0 0 1.84-2.3 8.28 8.28 0 0 1-2.63 1 4.12 4.12 0 0 0-7.11 3.74 11.67 11.67 0 0 1-8.47-4.3 4.12 4.12 0 0 0 1.28 5.49 4.1 4.1 0 0 1-1.86-.51v.05a4.12 4.12 0 0 0 3.3 4 4.12 4.12 0 0 1-1.86.07 4.12 4.12 0 0 0 3.84 2.85 8.28 8.28 0 0 1-5.12 1.77c-.33 0-.65-.02-.97-.05a11.67 11.67 0 0 0 6.29 1.85c7.55 0 11.67-6.26 11.67-11.67v-.53c.8-.58 1.5-1.3 2.05-2.13z" />
+                            </svg>
+                          </a>
+                          <a href="https://instagram.com" target="_blank" class="text-white hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M7.75 2h8.5C19.15 2 21 3.85 21 6.25v8.5c0 2.4-1.85 4.25-4.25 4.25h-8.5C3.85 19 2 17.15 2 14.75v-8.5C2 3.85 3.85 2 6.25 2zm5.25 4c-2.79 0-5 2.21-5 5s2.21 5 5 5 5-2.21 5-5-2.21-5-5-5zm-1.68 5c0-.93.75-1.68 1.68-1.68.93 0 1.68.75 1.68 1.68s-.75 1.68-1.68 1.68c-.93 0-1.68-.75-1.68-1.68zm6.18-4.53c.41 0 .75-.34.75-.75s-.34-.75-.75-.75-.75.34-.75.75.34.75.75.75z" />
+                            </svg>
+                          </a>
+                          <a href="https://youtube.com" target="_blank" class="text-white hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M10 15l5.2-3-5.2-3z"></path>
+                              <path d="M21.6 7.2s-.2-1.5-.8-2.2c-.7-.9-1.5-1-3.2-1.1C15.2 4 12 4 12 4s-3.2 0-5.6.2c-1.7.1-2.5.2-3.2 1.1-.6.7-.8 2.2-.8 2.2s-.2 1.8-.2 3.6v1.6c0 1.8.2 3.6.2 3.6s.2 1.5.8 2.2c.7.9 1.5 1 3.2 1.1 2.4.2 5.6.2 5.6.2s3.2 0 5.6-.2c1.7-.1 2.5-.2 3.2-1.1.6-.7.8-2.2.8-2.2s.2-1.8.2-3.6v-1.6c0-1.8-.2-3.6-.2-3.6z"></path>
+                            </svg>
+                          </a>
+                          
+                        </div>
+                      </div> 
+      
+                      <div class="flex w-[200px]  flex-col align-center">
+                        <img src="assets - Copy/hand-drawn-iranian-women-illustration.png" alt="">
+                        <div class="px-3 py-2 bg-pink-400/50 rounded-2xl">
+                        <!-- <p class="text-center text-white font-semibold">Name</p> -->
+                        <p class="text-center text-white">Front Desk </p>
+                        </div>  
+                      </div>
+                  
+                      <!-- Contact -->
+                      <div>
+                        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                        <p>AVANZO CYBER INSTITUTE<br>NRA – 89, Whitefield,<br>Puthurkkara, Ayyanthole, Thrissur 680003</p>
+                        <p class="mt-4">
+                          <a href="tel:+917356111128" class="block hover:underline">+91 73561 11128</a>
+                          <a href="mailto:info@avanzosolutions.in" class="block hover:underline">info@avanzosolutions.in</a>
+                        </p>
+                      </div>
+                  
+                      <!-- Find Us Here -->
+                      <div class="text-center">
+                    
+                        <!-- Cyber Logo -->
+                        <img src="assets - Copy/cyber.png" alt="Cyber Logo" class="w-24 h-20 mx-auto mb-4">
+                    
+                        <!-- <button class="px-6 md:px-8 py-3 md:py-4 bg-secondary text-white rounded-lg hover:bg-tertiary transition-colors">
+                            Subscribe Now / 
+                        </button> -->
+                        <h3 class="text-lg font-semibold mb-4">Download CyberHulk</h3>
+      
+                    
+                        <!-- Scanner Image -->
+                        <img src="assets - Copy/scan.png" alt="Scanner" class="w-24 h-24 mx-auto mt-4">
+                    </div>
+                    
+                  </footer>
+                  
+                  <div class="w-full h-10 flex justify-center items-center bg-[#d191af] text-center text-sm text-gray-200 mt-0 mb-0">
+                    <p>
+                      A unit of Avanzo Cyber Solutions | Designed by
+                      <a href="https://avanzodesign.in" class="hover:underline text-white">avanzodesign.in</a>
+                    </p>
+                  </div>
+          
+    
+</body>
+</html>

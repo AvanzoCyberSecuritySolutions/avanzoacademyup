@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single course</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'raleway': ['Raleway', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'mochiy': ['Mochiy Pop One', 'sans-serif'],
+      },
+      fontWeight: {
+        'poppins-100': 100,
+        'poppins-200': 200,
+        'poppins-300': 300,
+        'poppins-400': 400,
+        'poppins-500': 500,
+        'poppins-600': 600,
+        'poppins-700': 700,
+        'poppins-800': 800,
+        'poppins-900': 900,
+
+        'raleway-100':100,
+        'raleway-200':200,
+        'raleway-300':300,
+        'raleway-400':400,
+        'raleway-500':500,
+        'raleway-600':600,
+        'raleway-700':700,
+        'raleway-800':800,
+        'raleway-900':900,
+
+
+        'roboto-100': 100,
+        'roboto-300': 300,
+        'roboto-400': 400,
+        'roboto-500': 500,
+        'roboto-700': 700,
+        'roboto-900': 900,
+      },
+      colors: {
+        primary: '#9f6496',
+        secondary:'#6265ab',
+        terirory:'#e6e4e4'
+      }
+    }
+  }
+}
+</script>
+<style>
+
+    </style>
+    <script>
+      
+        
+    
+      function popup(){
+  const popup = document.getElementById('popup');
+  popup.classList.remove('hidden');
+}
+    </script>
+    <!-- <link rel="stylesheet" href="input.css"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            overflow-x: hidden;
+        }
+        .nav-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-menu.active {
+            transform: translateX(0);
+        }
+        .dot, .dot-expert, .dot-testimonial {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      border: 1px solid rgb(66, 66, 66);
+      background-color: white; /* Gray-300 */
+      display: inline-block;
+      margin: 0 4px;
+      cursor: pointer;
+      transition: width 0.3s ease; /* Add transition for smooth effect */
+    }
+
+    .dot-testimonial{
+      border: 0.5px solid #9f6496;
+      background-color: #9f6496;
+    }
+
+    .dot.active, .dot-expert.active{
+      width: 80px; /* Make the active dot wider */
+      background-color: #000000;
+      border-radius: 20px; /* Darker color for active dot */
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+
+    </style>
+</head>
+
+<body>
+
+ 
+ 
+
+      <!-- Overview Section -->
+      <section id="overview-certificate-section" class="py-12 bg-white">
+          <div class="container max-w-[900px] mx-auto px-4">
+              <h2 class="text-2xl font-bold text-gray-800 mb-2">Overview Of Certificate Course In Cybersecurity Essentials: The Foundation</h2>
+              <p class="text-gray-700 mb-8">This Foundation Course on Cybersecurity introduces essential concepts and key terminologies in digital security. You’ll learn about network security, threat analysis, encryption, and ethical hacking, building a strong understanding of how to protect digital assets.By the end of the course, you will have a solid grasp of the fundamental principles of cybersecurity, key terminologies and be ready to explore more advanced areas of digital security. </p>
+              This 10 weeks foundational module includes</p>
+
+              <div class="space-y-2">
+                <!-- Question 1 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 1 :What is Cyber security?</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+  <div class="hidden mt-4 text-black faq-answer">
+  <ul class="list-disc list-inside space-y-1">
+    <li>Importance of cyber security in today’s world.</li>
+    <li>Understanding the cyber space</li>
+    <li>Difference between cybersecurity and Information security</li>
+  </ul>
+</div>
+</div>
+
+                <!-- Question 2 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 2- Network security</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+  <div class="hidden mt-4 text-black faq-answer">
+  <ul class="list-disc list-inside space-y-1">
+    <li>History of the Internet</li>
+    <li>Types of network</li>
+    <li>Network protocol</li>
+    <li>Network Intrusion</li>
+    <li>Network security measures</li>
+
+
+  </ul>
+</div>
+</div>
+
+                <!-- Question 3 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 3: Application security</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+  <div class="hidden mt-4 text-black faq-answer">
+  <ul class="list-disc list-inside space-y-1">
+    <li>Introduction to Application Security</li>
+    <li>Importance of Application Security</li>
+    <li>Secure Software Development Lifecycle (SDLC)</li>
+    <li>Threat Modeling</li>
+    <li>Secure Coding Practices</li>
+    <li>Authentication and Authorization</li>
+    <li>Data Protection</li>
+    <li>Types of Application Security</li>
+  </ul>
+  </div>
+</div>
+
+                <!-- Question 4 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 4- Data security</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+  <div class="hidden mt-4 text-black faq-answer">
+  <ul class="list-disc list-inside space-y-1">
+    <li>Introduction to Data Security</li>
+    <li>Types of data security threats</li>
+    <li>Data security practices and strategies</li>
+    <li>Data Backup, Masking & Security Patches</li>
+    <li>Essential Security Tools & Lessons from Real-World Breaches</li>
+    
+  </ul>
+  </div>
+</div>
+
+                <!-- Question 5 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 5 - Understanding Hackers and Their Techniques</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+  <div class="hidden mt-4 text-black faq-answer">
+    <ul class="list-disc list-inside space-y-1">
+    <li>Social Engineering</li>
+    <li>Understanding Different Types of Hackers</li>
+    <li>Stages of a Cyberattack& How to Prevent Them</li>
+  </ul>
+</div>
+</div>
+<!-- Question 6 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 6-Incident Handling</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+<div class="hidden mt-4 text-black faq-answer">
+  <ul class="list-disc pl-5">
+    <li>Introduction to Incident Handling</li>
+    <li>Phases of Incident Handling: From Detection to Recovery</li>
+    <li>Key Elements of an Incident Response Plan (IRP)</li>
+    <li>Incident Classification and Severity Levels</li>
+    <li>Disaster Management</li>
+    <li>Risk Management</li>
+    <li>Disaster Recovery</li>
+    <li>Digital Forensic</li>
+    <li>Incident Handling and Best Practices</li>
+  </ul>
+</div>
+
+</div>
+<!-- Question 7 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 7 - Understanding threat and attacks</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+  <div class="hidden mt-4 text-black faq-answer">
+  <ul class="list-disc pl-5">
+    <li>Understanding Cyber Threats and Attacks</li>
+    <li>Key Concepts and Terminology in Cyber Law</li>
+    <li>Understanding Data Protection Regulations</li>
+    <li>Intellectual Property Issues in the Digital Age</li>
+    <li>Challenges in Enforcing Intellectual Property Rights Online</li>
+    <li>Types of Cyber Threats and Attacks</li>
+    <li>Impacts of Cyber Crime</li>
+    <li>Cyber Laws and Frameworks in India</li>
+  </ul>
+</div>
+
+</div>
+<!-- Question 8 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 8 - How to secure your cyber world</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+  <div class="hidden mt-4 text-black faq-answer">
+  <ul class="list-disc pl-5">
+    <li>CIA Triad</li>
+    <li>Staying Safe from Cyber-Attacks</li>
+    <li>Introduction to Encryption and Network Security</li>
+  </ul>
+</div>
+</div>
+
+<!-- Question 9 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 9 - Exploring Opportunities</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+  <div class="hidden mt-4 text-black faq-answer">
+    <p class="text-black mb-8">This Foundation Course on Cybersecurity introduces essential concepts and key terminologies in digital security. You’ll learn about network security, threat analysis, encryption, and ethical hacking, building a strong understanding of how to protect digital assets.By the end of the course, you will have a solid grasp of the fundamental principles of cybersecurity, key terminologies and be ready to explore more advanced areas of digital security. </p>
+
+</div>
+</div>
+
+<!-- Question 10 -->
+                <div class="py-4 faq-item">
+  <div class="flex justify-between items-center">
+    <h3 class="text-lg font-medium text-black">Module 10 - Emerging Cybersecurity Trends & Technologies</h3>
+    <button class="text-black focus:outline-none toggle-button">
+      <svg class="h-5 w-5 fill-current toggle-icon transition-transform duration-300" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="border-blue-500 mt-2">
+  <div class="hidden mt-4 text-black faq-answer">
+  <ul class="list-disc pl-5">
+    <li>Harnessing AI and Machine Learning in Cybersecurity</li>
+    <li>Challenges of AI in Cybersecurity</li>
+    <li>Blockchain and Quantum Computing in Cybersecurity</li>
+    <li>Quantum Computing and the Future of Cybersecurity</li>
+  </ul>
+</div>
+</div>
+</div>
+        </div>
+    </section>
+    <script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const button = item.querySelector('.toggle-button');
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.toggle-icon');
+
+    button.addEventListener('click', () => {
+      answer.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    });
+  });
+</script>
+              <!-- This 10 weeks foundational module includes -->
+              <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> -->
+                  <!-- Column 1 -->
+                  <!-- <article class="border-r-2 border-[#843B94] max-md:border-0 pr-8">
+                      <h3 class="text-2xl font-semibold text-[#656299] mb-2">Module 1- What is Cyber security?</h3>
+                      <ul class="text-gray-600 list-disc pl-5">
+                        <li>Importance of cyber security in today’s world.</li><br>
+                        <li>Understanding the cyber space</li><br>
+                        <li>Difference between cybersecurity and Information security</li><br>
+                      </ul>
+                                        </article> -->
+
+                  <!-- Column 2 -->
+                  <!-- <article class="border-r-2 border-[#843B94] max-md:border-0 pr-8">
+                      <h3 class="text-lg font-semibold text-[#656299] mb-2">Module 2- Network security</h3>
+                      <ul class="text-gray-600 list-disc pl-5">
+                        <li>History of the Internet</li><br>
+                        <li>Types of network</li><br>
+                        <li>Network protocol</li><br>
+                        <li>Network Intrusion</li><br>
+                        <li>Network security measures</li>
+                      </ul>
+                    </article> -->
+
+                  <!-- Column 3 -->
+                  <!-- <article class="border-r-2 border-[#843B94] max-md:border-0 pr-8">
+                      <h3 class="text-lg font-semibold text-[#656299] mb-2">Module 3: Application security</h3>
+                      <ul class="text-gray-600 list-disc pl-5">
+                        <li>Introduction to Application Security</li>
+                        <li>Importance of Application Security</li>
+                        <li>Secure Software Development Lifecycle (SDLC)</li>
+                        <li>Threat Modeling</li>
+                        <li>Secure Coding Practices</li>
+                        
+                      </ul>
+                                        </article>
+              </div> -->
+
+              <!-- <div class="text-center mt-8">
+                  <a href="learn.html" class="bg-[#6265AC] cursor-pointer hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full inline-block focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                      Learn More
+                  </a>
+              </div>
+          </div>
+      </section> -->
+
+      <!-- Video Section -->
+
+
+</body>
+</html>
